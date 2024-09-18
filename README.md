@@ -1,5 +1,5 @@
 # Empresa_construcción
-1. Creación del código SQL.
+1. Creación de las estrutura de la base de datos en lenguaje SQL (Tablas y Relaciones).
 ```sql
 -- Crear la base de datos
 CREATE DATABASE EmpresaConstruccion;
@@ -108,5 +108,64 @@ CREATE TABLE UsuariosSistema (
 );
 
 ```
-2. Creación del diagrama para la visualización efectiva de los datos.
+2. Inserción de los datos en la base de datos creada.
+```sql
+-- Insertar datos en la tabla Puestos
+INSERT INTO Puestos (nombre_puesto, descripcion) VALUES 
+('Ingeniero Civil', 'Responsable de la planificación y ejecución de proyectos'),
+('Administrador', 'Encargado de la gestión administrativa'),
+('Albañil', 'Realiza labores de construcción en el campo');
+
+-- Insertar datos en la tabla Departamentos
+INSERT INTO Departamentos (nombre_departamento, presupuesto_anual) VALUES
+('Construcción', 500000.00),
+('Administración', 200000.00),
+('Logística', 150000.00);
+
+-- Insertar datos en la tabla Empleados
+INSERT INTO Empleados (nombre, apellido, email, telefono, puesto_id, salario, fecha_contratacion, departamento_id) VALUES 
+('Juan', 'Pérez', 'juan.perez@empresa.com', '123456789', 1, 3500.00, '2022-05-01', 1),
+('Ana', 'García', 'ana.garcia@empresa.com', '987654321', 2, 4000.00, '2021-08-15', 2),
+('Carlos', 'Martínez', 'carlos.martinez@empresa.com', '555555555', 3, 2500.00, '2023-01-10', 1);
+
+-- Insertar datos en la tabla Clientes
+INSERT INTO Clientes (nombre_cliente, email_cliente, telefono_cliente) VALUES
+('Constructora ABC', 'contacto@abc.com', '123123123'),
+('Desarrolladora XYZ', 'info@xyz.com', '321321321');
+
+-- Insertar datos en la tabla Proyectos
+INSERT INTO Proyectos (nombre_proyecto, cliente_id, fecha_inicio, fecha_fin, presupuesto) VALUES
+('Edificio Central', 1, '2023-06-01', '2024-06-01', 1200000.00),
+('Parque Residencial', 2, '2022-03-15', '2023-09-20', 800000.00);
+
+-- Insertar datos en la tabla Materiales
+INSERT INTO Materiales (nombre_material, descripcion, precio_unitario) VALUES
+('Cemento', 'Cemento de alta calidad', 50.00),
+('Ladrillo', 'Ladrillo rojo estándar', 0.80),
+('Varilla', 'Varilla de acero de 1 pulgada', 10.00);
+
+-- Insertar datos en la tabla Proveedores
+INSERT INTO Proveedores (nombre_proveedor, email_proveedor, telefono_proveedor) VALUES
+('Proveedor A', 'contacto@proveedora.com', '111111111'),
+('Proveedor B', 'ventas@proveedorb.com', '222222222');
+
+-- Relacionar Materiales con Proveedores (muchos a muchos)
+INSERT INTO ProveedorMaterial (proveedor_id, material_id) VALUES
+(1, 1),
+(1, 2),
+(2, 3);
+
+-- Insertar datos en la tabla Almacenes
+INSERT INTO Almacenes (ubicacion, capacidad) VALUES
+('Almacén Central', 1000),
+('Almacén Secundario', 500);
+
+-- Insertar datos en la tabla MaterialesAlmacen
+INSERT INTO MaterialesAlmacen (almacen_id, material_id, cantidad) VALUES
+(1, 1, 200),
+(1, 2, 500),
+(2, 3, 150);
+
+```
+4.  Creación del diagrama para la visualización efectiva de los datos.
 

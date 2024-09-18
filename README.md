@@ -195,7 +195,9 @@ INSERT INTO MaterialesAlmacen (almacen_id, material_id, cantidad) VALUES
 
 </details>
 
-4. Redacción de querys básicas para el entendimiento de la sintaxis básica de SQL.
+<details>
+<summary><h2>4. Redacción de querys básicas para el entendimiento de la sintaxis básica de SQL.</h2></summary>
+    
  
    4.1. Seleccionar todos los empleados y su puesto.
 
@@ -285,6 +287,10 @@ SELECT A.ubicacion, SUM(MA.cantidad) AS total_materiales
 FROM Almacenes A
 JOIN MaterialesAlmacen MA ON A.almacen_id = MA.almacen_id
 GROUP BY A.ubicacion;
+```
+
+</details>
+
 
 ```
 

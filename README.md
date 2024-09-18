@@ -108,6 +108,7 @@ CREATE TABLE UsuariosSistema (
 );
 
 ```
+
 2. Inserción de los datos en la base de datos creada.
 ```sql
 -- Insertar datos en la tabla Puestos

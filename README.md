@@ -182,6 +182,7 @@ INSERT INTO MaterialesAlmacen (almacen_id, material_id, cantidad) VALUES
         ![Captura desde 2024-09-18 16-07-43](https://github.com/user-attachments/assets/d549d346-0921-409c-b03f-1a1f505ee451)
 
 4. Redacción de querys básicas para el entendimiento de la sintaxis básica de SQL.
+ 
    4.1. Seleccionar todos los empleados y su puesto.
 
 ```sql

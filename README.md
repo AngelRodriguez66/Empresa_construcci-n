@@ -291,7 +291,3 @@ GROUP BY A.ubicacion;
 
 </details>
 
-
-```
-
- 

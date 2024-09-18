@@ -181,5 +181,96 @@ INSERT INTO MaterialesAlmacen (almacen_id, material_id, cantidad) VALUES
        3.2.2. Ir a DrawDB, crear un archivo nuevo, 'Archivo', 'Importar desde fuente' y seleccionar el archivo. OJO!! revisar relaciones, pueden haber fallos.
         ![Captura desde 2024-09-18 16-07-43](https://github.com/user-attachments/assets/d549d346-0921-409c-b03f-1a1f505ee451)
 
+4. Redacción de querys básicas para el entendimiento de la sintaxis básica de SQL.
+   4.1. Seleccionar todos los empleados y su puesto.
 
 ```sql
+SELECT E.nombre, E.apellido, P.nombre_puesto 
+FROM Empleados E
+JOIN Puestos P ON E.puesto_id = P.puesto_id;
+```
+   4.2. Filtrar empleados con salario mayor a 3000.
+
+```sql
+SELECT nombre, apellido, salario 
+FROM Empleados 
+WHERE salario > 3000;
+
+```
+
+   4.3. Ordenar proyectos por fecha de inicio.
+
+```sql
+SELECT nombre_proyecto, fecha_inicio 
+FROM Proyectos 
+ORDER BY fecha_inicio ASC;
+
+```
+
+   4.4. Limitar los resultados a los 3 primeros materiales más caros.
+
+```sql
+SELECT nombre_material, precio_unitario 
+FROM Materiales 
+ORDER BY precio_unitario DESC 
+LIMIT 3;
+
+```
+
+   4.5. Contar el número de empleados en cada departamento.
+
+```sql
+SELECT D.nombre_departamento, COUNT(E.empleado_id) AS total_empleados
+FROM Departamentos D
+LEFT JOIN Empleados E ON D.departamento_id = E.departamento_id
+GROUP BY D.nombre_departamento;
+
+```
+
+   4.6. Obtener la suma del presupuesto total de todos los proyectos.
+
+```sql
+SELECT SUM(presupuesto) AS presupuesto_total 
+FROM Proyectos;
+
+```
+
+   4.7. Filtrar proveedores que suministran "Cemento".
+
+```sql
+SELECT P.nombre_proveedor 
+FROM Proveedores P
+JOIN ProveedorMaterial PM ON P.proveedor_id = PM.proveedor_id
+JOIN Materiales M ON PM.material_id = M.material_id
+WHERE M.nombre_material = 'Cemento';
+
+```
+
+   4.8. Actualizar el salario de un empleado
+
+```sql
+UPDATE Empleados 
+SET salario = 4500.00 
+WHERE empleado_id = 1;
+
+```
+
+   4.9. Eliminar un proyecto.
+
+```sql
+DELETE FROM Proyectos 
+WHERE proyecto_id = 2;
+
+```
+
+   4.10. Agrupar los materiales por almacén y mostrar la cantidad total en cada uno
+
+```sql
+SELECT A.ubicacion, SUM(MA.cantidad) AS total_materiales
+FROM Almacenes A
+JOIN MaterialesAlmacen MA ON A.almacen_id = MA.almacen_id
+GROUP BY A.ubicacion;
+
+```
+
+ 

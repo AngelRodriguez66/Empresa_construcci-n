@@ -1,6 +1,8 @@
 # Empresa_construcción
 
-1. Creación de las estrutura de la base de datos en lenguaje SQL (Tablas y Relaciones).
+<details>
+<summary><h2>1. Creación de la estrutura de la base de datos SQL (Tablas y Relaciones). </h2></summary>
+    
 ```sql
 -- Crear la base de datos
 CREATE DATABASE EmpresaConstruccion;
@@ -109,8 +111,12 @@ CREATE TABLE UsuariosSistema (
 );
 
 ```
+</details>
 
-2. Inserción de los datos en la base de datos creada.
+<details>
+<summary><h2>2. Inserción de los datos en la base de datos creada.</h2></summary>
+    
+
 ```sql
 -- Insertar datos en la tabla Puestos
 INSERT INTO Puestos (nombre_puesto, descripcion) VALUES 
@@ -169,7 +175,13 @@ INSERT INTO MaterialesAlmacen (almacen_id, material_id, cantidad) VALUES
 (2, 3, 150);
 
 ```
-3. Creación del diagrama para la visualización efectiva de los datos.
+
+</details>
+
+<details>
+<summary><h2>3. Creación del diagrama para la visualización efectiva de los datos.</h2></summary>
+    
+
     3.1. Creación del diagrama con Workbench (Muy buena visualización).
         ![Captura desde 2024-09-18 15-48-05](https://github.com/user-attachments/assets/da7ec268-b2fa-4d74-bd13-340b696dd329)
         ![Captura desde 2024-09-18 15-49-32](https://github.com/user-attachments/assets/a871b2fa-0d46-4885-8d4a-072d86f01bf1)
@@ -180,6 +192,8 @@ INSERT INTO MaterialesAlmacen (almacen_id, material_id, cantidad) VALUES
        3.2.1. Ir a Workbench y exportar la bse de datos en un archivo SQL.
        3.2.2. Ir a DrawDB, crear un archivo nuevo, 'Archivo', 'Importar desde fuente' y seleccionar el archivo. OJO!! revisar relaciones, pueden haber fallos.
         ![Captura desde 2024-09-18 16-07-43](https://github.com/user-attachments/assets/d549d346-0921-409c-b03f-1a1f505ee451)
+
+</details>
 
 4. Redacción de querys básicas para el entendimiento de la sintaxis básica de SQL.
  

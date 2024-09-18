@@ -230,7 +230,9 @@ ORDER BY fecha_inicio ASC;
 ```
 </details>
 
-   4.4. Limitar los resultados a los 3 primeros materiales más caros.
+<details>
+<summary>4.4. Limitar los resultados a los 3 primeros materiales más caros.</summary>
+
 
 ```sql
 SELECT nombre_material, precio_unitario 
@@ -239,8 +241,11 @@ ORDER BY precio_unitario DESC
 LIMIT 3;
 
 ```
+</details>
 
-   4.5. Contar el número de empleados en cada departamento.
+<details>
+<summary>4.5. Contar el número de empleados en cada departamento.</summary>
+
 
 ```sql
 SELECT D.nombre_departamento, COUNT(E.empleado_id) AS total_empleados
@@ -249,17 +254,21 @@ LEFT JOIN Empleados E ON D.departamento_id = E.departamento_id
 GROUP BY D.nombre_departamento;
 
 ```
+</details>
 
-   4.6. Obtener la suma del presupuesto total de todos los proyectos.
-
+<details>
+<summary>4.6. Obtener la suma del presupuesto total de todos los proyectos.</summary>
+   
 ```sql
 SELECT SUM(presupuesto) AS presupuesto_total 
 FROM Proyectos;
 
 ```
+</details>
 
-   4.7. Filtrar proveedores que suministran "Cemento".
-
+<details>
+<summary>4.7. Filtrar proveedores que suministran "Cemento".</summary>
+   
 ```sql
 SELECT P.nombre_proveedor 
 FROM Proveedores P
@@ -268,7 +277,7 @@ JOIN Materiales M ON PM.material_id = M.material_id
 WHERE M.nombre_material = 'Cemento';
 
 ```
-
+</details>
    4.8. Actualizar el salario de un empleado
 
 ```sql

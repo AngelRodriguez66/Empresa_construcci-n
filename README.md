@@ -198,14 +198,16 @@ INSERT INTO MaterialesAlmacen (almacen_id, material_id, cantidad) VALUES
 <details>
 <summary><h2>4. Redacción de querys básicas para el entendimiento de la sintaxis básica de SQL.</h2></summary>
     
- 
-   4.1. Seleccionar todos los empleados y su puesto.
+ <details>
+<summary>4.1. Seleccionar todos los empleados y su puesto.</summary>
 
 ```sql
 SELECT E.nombre, E.apellido, P.nombre_puesto 
 FROM Empleados E
 JOIN Puestos P ON E.puesto_id = P.puesto_id;
 ```
+</details>
+
    4.2. Filtrar empleados con salario mayor a 3000.
 
 ```sql

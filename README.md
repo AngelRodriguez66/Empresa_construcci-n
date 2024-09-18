@@ -1,4 +1,5 @@
 # Empresa_construcción
+
 1. Creación de las estrutura de la base de datos en lenguaje SQL (Tablas y Relaciones).
 ```sql
 -- Crear la base de datos
@@ -168,5 +169,17 @@ INSERT INTO MaterialesAlmacen (almacen_id, material_id, cantidad) VALUES
 (2, 3, 150);
 
 ```
-4.  Creación del diagrama para la visualización efectiva de los datos.
+3. Creación del diagrama para la visualización efectiva de los datos.
+    3.1. Creación del diagrama con WorkBrench.
+       3.1.1.
+        ![Captura desde 2024-09-18 15-48-05](https://github.com/user-attachments/assets/da7ec268-b2fa-4d74-bd13-340b696dd329)
+       3.1.2.
+        ![Captura desde 2024-09-18 15-49-32](https://github.com/user-attachments/assets/a871b2fa-0d46-4885-8d4a-072d86f01bf1)
+       3.1.3.
+       ![Captura desde 2024-09-18 15-52-44](https://github.com/user-attachments/assets/af888085-08c5-4e6b-81ff-d00473c211a5)
+       3.1.4.
+       ![Captura desde 2024-09-18 15-53-56](https://github.com/user-attachments/assets/c31faaf7-8f4e-4632-9a7f-6cc0011c641e)
 
+
+
+```sql

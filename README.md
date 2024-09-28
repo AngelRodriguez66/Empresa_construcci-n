@@ -196,7 +196,7 @@ INSERT INTO MaterialesAlmacen (almacen_id, material_id, cantidad) VALUES
 </details>
 
 <details>
-<summary><h2>4. Redacción de querys básicas para el entendimiento de la sintaxis básica de SQL.</h2></summary>
+<summary><h2>4. Redacción de querys.</h2></summary>
     
  <details>
 <summary>4.1. Seleccionar todos los empleados y su puesto.</summary>
@@ -278,7 +278,9 @@ WHERE M.nombre_material = 'Cemento';
 
 ```
 </details>
-   4.8. Actualizar el salario de un empleado
+
+<details>
+<summary>4.8. Actualizar el salario de un empleado</summary>
 
 ```sql
 UPDATE Empleados 
@@ -286,16 +288,22 @@ SET salario = 4500.00
 WHERE empleado_id = 1;
 
 ```
+</details>
 
-   4.9. Eliminar un proyecto.
+<details>
+<summary>4.9. Eliminar un proyecto.</summary>
 
 ```sql
 DELETE FROM Proyectos 
 WHERE proyecto_id = 2;
 
 ```
+</details>
 
-   4.10. Agrupar los materiales por almacén y mostrar la cantidad total en cada uno
+<details>
+<summary>4.10. Agrupar los materiales por almacén y mostrar la cantidad total en cada uno.</summary>
+    
+   
 
 ```sql
 SELECT A.ubicacion, SUM(MA.cantidad) AS total_materiales

@@ -1,5 +1,5 @@
 # Empresa_construcción
-![imagen](https://github.com/user-attachments/assets/965bfeda-5a7a-4c97-8d8a-a724e5257332)
+![image](https://github.com/user-attachments/assets/0affa04a-b97d-4416-a9dc-0f009bcd99dd)
 
 <details>
 <summary><h2>1. Creación de la estrutura de la base de datos SQL (Tablas y Relaciones). </h2></summary>
